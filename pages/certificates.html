@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificates · Moe Kyaw Aung | Senior Android Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Share+Tech+Mono&family=Noto+Sans+Myanmar:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="https://res.cloudinary.com/dye5qpwii/image/upload/v1778763535/MKA_25_lbx6fb.webp" />
+</head>
+<body>
+  <canvas id="particles"></canvas>
+  <div class="scanlines"></div>
+  <div class="noise"></div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="logo glitch-text" data-text="MKA.DEV">MKA.DEV</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#apps">Apps</a></li>
+        <li><a href="certificates.html" class="active">Certificates</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button id="langToggle" class="ctrl-btn">EN / မြန်မာ</button>
+        <button id="themeToggle" class="ctrl-btn">☀ / ☾</button>
+        <button id="aiToggle" class="ctrl-btn ai-btn">✦ AI</button>
+        <button class="menu-btn" id="menuBtn">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="section-label">// CREDENTIALS</div>
+    <h1 class="glitch-text" data-text="Programming Hub Certificates">Programming Hub Certificates</h1>
+    <p style="color:var(--muted);max-width:560px;margin:0 auto 1.5rem" data-en="82+ certificates across 9 domains · Google Developers Launchpad partnership" data-my="၉ ခုသော domains မှ ၈၂+ လက်မှတ်များ · Google Developers Launchpad">
+      82+ certificates across 9 domains · Google Developers Launchpad partnership
+    </p>
+    <div class="hero-stats" style="justify-content:center">
+      <div class="stat hologram"><div class="stat-n">82+</div><div class="stat-l">Certificates</div></div>
+      <div class="stat hologram"><div class="stat-n">9</div><div class="stat-l">Categories</div></div>
+      <div class="stat hologram"><div class="stat-n">2024+</div><div class="stat-l">Years</div></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cert-search-wrap">
+        <span class="search-icon">🔍</span>
+        <input class="cert-search" type="text" id="certSearch" placeholder="Search certificates... / လက်မှတ်များ ရှာရန်" />
+      </div>
+      <div class="cert-filter">
+        <button class="filter-btn active" data-cat="all">All (<span id="certCount">82</span>)</button>
+        <button class="filter-btn" data-cat="Programming Languages">⌨️ Programming</button>
+        <button class="filter-btn" data-cat="Web Development">🌐 Web Dev</button>
+        <button class="filter-btn" data-cat="Mobile & App Dev">📱 Mobile</button>
+        <button class="filter-btn" data-cat="Databases">🗄️ Databases</button>
+        <button class="filter-btn" data-cat="AI & Data Science">🤖 AI/ML</button>
+        <button class="filter-btn" data-cat="Security & DevOps">🔐 Security</button>
+        <button class="filter-btn" data-cat="Blockchain">⛓️ Blockchain</button>
+        <button class="filter-btn" data-cat="Software Engineering">🛠️ SE</button>
+        <button class="filter-btn" data-cat="Marketing & Business">📈 Business</button>
+      </div>
+      <div id="certContainer"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-nav">
+        <a href="../index.html">Home</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="videos.html">Videos</a>
+        <a href="resume.html">Resume</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+      <p class="quote">"Code with culture. Build with purpose."</p>
+      <p class="copy">© 2026 Moe Kyaw Aung · Senior Android Developer</p>
+    </div>
+  </footer>
+
+  <div class="ai-panel" id="aiPanel">
+    <div class="ai-header"><span>✦ MKA AI</span><button id="aiClose">✕</button></div>
+    <div class="ai-messages" id="aiMessages">
+      <div class="ai-msg bot">Ask about certificates, Kotlin, Compose, or projects.</div>
+    </div>
+    <div class="ai-input-wrap">
+      <input type="text" id="aiInput" placeholder="Ask..." />
+      <button id="aiSend">Send</button>
+    </div>
+  </div>
+
+  <script src="../js/shared.js"></script>
+  <script src="../js/certificates.js"></script>
+</body>
+</html>

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Moe Kyaw Aung — Senior Android Developer | Kotlin · Jetpack Compose · Clean Architecture | Tachileik, Myanmar ↔ Bangkok" />
+  <meta name="author" content="Moe Kyaw Aung" />
+  <title>Moe Kyaw Aung | Senior Android Developer · Cyberpunk Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&family=Noto+Sans+Myanmar:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="https://res.cloudinary.com/dye5qpwii/image/upload/v1778763535/MKA_25_lbx6fb.webp" />
+</head>
+<body>
+  <!-- Particle Canvas -->
+  <canvas id="particles"></canvas>
+  <!-- Scanlines Overlay -->
+  <div class="scanlines"></div>
+  <!-- Noise Overlay -->
+  <div class="noise"></div>
+
+  <!-- ========== NAV ========== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="logo glitch-text" data-text="MKA.DEV">MKA.DEV</a>
+      <ul class="nav-links">
+        <li><a href="#about" data-en="About" data-my="အကြောင်း">About</a></li>
+        <li><a href="#journey" data-en="Journey" data-my="ခရီး">Journey</a></li>
+        <li><a href="#skills" data-en="Skills" data-my="ကျွမ်းကျင်မှု">Skills</a></li>
+        <li><a href="#compose" data-en="Compose" data-my="Compose">Compose</a></li>
+        <li><a href="#apps" data-en="Apps" data-my="အက်ပ်များ">Apps</a></li>
+        <li><a href="#projects" data-en="Projects" data-my="ပရောဂျက်">Projects</a></li>
+        <li><a href="#architecture" data-en="Architecture" data-my="ဗိသုကာ">Arch</a></li>
+        <li><a href="#achievements" data-en="Achievements" data-my="အောင်မြင်မှု">Wins</a></li>
+        <li><a href="#contact" data-en="Contact" data-my="ဆက်သွယ်ရန်">Contact</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button id="langToggle" class="ctrl-btn" title="Language">EN / မြန်မာ</button>
+        <button id="themeToggle" class="ctrl-btn" title="Theme">☀ / ☾</button>
+        <button id="aiToggle" class="ctrl-btn ai-btn" title="AI Assistant">✦ AI</button>
+        <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="status-bar">
+          <span class="status-dot"></span>
+          <span data-en="OPEN TO WORK · SENIOR ANDROID" data-my="အလုပ်ရှာနေသည် · SENIOR ANDROID">OPEN TO WORK · SENIOR ANDROID</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="glitch-text" data-text="MOE KYAW AUNG">MOE KYAW AUNG</span>
+          <span class="hero-my" data-en="" data-my="မိုးကျော်အောင်">မိုးကျော်အောင်</span>
+        </h1>
+        <div class="typing-wrap">
+          <span id="typing" class="typing"></span><span class="cursor-blink">|</span>
+        </div>
+        <p class="hero-loc">
+          <span>Tachileik, Myanmar 🇲🇲</span>
+          <span class="arrow">↔</span>
+          <span>Bangkok, Thailand 🇹🇭</span>
+        </p>
+        <p class="hero-desc" data-en="Senior Android Engineer building production-grade apps with Kotlin, Jetpack Compose, Clean Architecture & offline-first design. Bridging Myanmar tech to the world." data-my="Kotlin၊ Jetpack Compose၊ Clean Architecture နှင့် offline-first ဒီဇိုင်းဖြင့် production-grade Android အက်ပ်များ တည်ဆောက်နေသော Senior Android Engineer။ မြန်မာနည်းပညာကို ကမ္ဘာနှင့် ချိတ်ဆက်နေသည်။">
+          Senior Android Engineer building production-grade apps with Kotlin, Jetpack Compose, Clean Architecture & offline-first design. Bridging Myanmar tech to the world.
+        </p>
+        <div class="hero-stats">
+          <div class="stat hologram">
+            <div class="stat-n" data-count="10">0</div>
+            <div class="stat-l" data-en="Years Exp" data-my="နှစ်အတွေ့အကြုံ">Years Exp</div>
+          </div>
+          <div class="stat hologram">
+            <div class="stat-n" data-count="82">0</div>
+            <div class="stat-l" data-en="Certificates" data-my="လက်မှတ်များ">Certificates</div>
+          </div>
+          <div class="stat hologram">
+            <div class="stat-n" data-count="40">0</div>
+            <div class="stat-l" data-en="Projects" data-my="ပရောဂျက်များ">Projects</div>
+          </div>
+          <div class="stat hologram">
+            <div class="stat-n" data-count="16">0</div>
+            <div class="stat-l" data-en="Socials" data-my="လူမှုကွန်ရက်">Socials</div>
+          </div>
+        </div>
+        <div class="hero-ctas">
+          <a href="#apps" class="btn-neon" data-en="View Apps" data-my="အက်ပ်များကြည့်ရန်">View Apps</a>
+          <a href="#contact" class="btn-outline" data-en="Contact Me" data-my="ဆက်သွယ်ရန်">Contact Me</a>
+          <a href="https://github.com/Dev-moe-kyawaung/" target="_blank" rel="noopener" class="btn-ghost">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="hero-avatar">
+        <div class="avatar-frame hologram-3d">
+          <div class="avatar-ring"></div>
+          <div class="avatar-ring r2"></div>
+          <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778763535/MKA_25_lbx6fb.webp" alt="Moe Kyaw Aung" class="avatar-img" id="heroAvatar" />
+          <div class="hologram-scan"></div>
+        </div>
+        <div class="avatar-tags">
+          <span class="tag">Kotlin</span>
+          <span class="tag">Compose</span>
+          <span class="tag">Clean Arch</span>
+          <span class="tag">Firebase</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span data-en="SCROLL TO EXPLORE" data-my="လှိမ့်ကြည့်ရန်">SCROLL TO EXPLORE</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-label" data-en="// 01 · ABOUT" data-my="// 01 · အကြောင်း">// 01 · ABOUT</div>
+      <h2 class="section-title glitch-text" data-text="Developer by passion" data-en="Developer by passion,<br>learner by nature." data-my="စိတ်အားထက်သန်သော developer,<br>သဘာဝအရ သင်ယူသူ။">Developer by passion,<br>learner by nature.</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p data-en="I am a Senior Android Engineer with deep expertise in Kotlin, Jetpack Compose, MVVM/MVI and Clean Architecture. I design offline-first, multi-module applications that scale, integrate Firebase suites and REST APIs, and ship with full CI/CD pipelines." data-my="ကျွန်တော်သည် Kotlin၊ Jetpack Compose၊ MVVM/MVI နှင့် Clean Architecture တွင် နက်ရှိုင်းသော ကျွမ်းကျင်မှုရှိသော Senior Android Engineer ဖြစ်သည်။ Offline-first၊ multi-module အက်ပ်များကို ဒီဇိုင်းဆွဲပြီး Firebase နှင့် REST APIs ကို ပေါင်းစည်းကာ CI/CD pipeline များဖြင့် ထုတ်လုပ်သည်။">
+            I am a Senior Android Engineer with deep expertise in Kotlin, Jetpack Compose, MVVM/MVI and Clean Architecture. I design offline-first, multi-module applications that scale, integrate Firebase suites and REST APIs, and ship with full CI/CD pipelines.
+          </p>
+          <p data-en="From Tachileik, Myanmar to Bangkok, I bridge cultures through code. My philosophy: <em>Code with culture. Build with purpose.</em>" data-my="တချီလိတ်၊ မြန်မာမှ ဘန်ကောက်အထိ၊ ကုဒ်ဖြင့် ယဉ်ကျေးမှုများကို ချိတ်ဆက်သည်။ ကျွန်တော့်အတွေးအခေါ်: <em>ယဉ်ကျေးမှုနှင့်အတူ ကုဒ်ရေးပါ။ ရည်ရွယ်ချက်နှင့် တည်ဆောက်ပါ။</em>">
+            From Tachileik, Myanmar to Bangkok, I bridge cultures through code. My philosophy: <em>Code with culture. Build with purpose.</em>
+          </p>
+          <div class="focus-map">
+            <div class="focus-item hologram"><span>Mobile</span><code>Kotlin · Compose · MVVM · Clean</code></div>
+            <div class="focus-item hologram"><span>Backend</span><code>Firebase · REST · Python</code></div>
+            <div class="focus-item hologram"><span>Security</span><code>Ethical Hacking · Cybersec</code></div>
+            <div class="focus-item hologram"><span>AI / ML</span><code>Claude API · TFLite · On-Device</code></div>
+          </div>
+        </div>
+        <div class="about-card hologram">
+          <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778763531/MKA_12_iv8kpm.webp" alt="Profile" class="about-img" />
+          <div class="info-list">
+            <div class="info-row"><span data-en="Full Name" data-my="အမည်အပြည့်">Full Name</span><strong>Moe Kyaw Aung · မိုးကျော်အောင်</strong></div>
+            <div class="info-row"><span>GitHub</span><strong class="accent">Dev-moe-kyawaung</strong></div>
+            <div class="info-row"><span data-en="Role" data-my="ရာထူး">Role</span><strong>Senior Android Developer</strong></div>
+            <div class="info-row"><span data-en="Status" data-my="အခြေအနေ">Status</span><strong class="online">● Open to Work</strong></div>
+            <div class="info-row"><span data-en="Building" data-my="တည်ဆောက်နေ">Building</span><strong>MoekyawTranslator</strong></div>
+            <div class="info-row"><span data-en="Languages" data-my="ဘာသာစကား">Languages</span><strong>Burmese · English · Kotlin</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== JOURNEY ========== -->
+  <section class="section alt" id="journey">
+    <div class="container">
+      <div class="section-label" data-en="// 02 · JOURNEY" data-my="// 02 · ခရီး">// 02 · JOURNEY</div>
+      <h2 class="section-title" data-en="Android Development Journey" data-my="Android ဖွံ့ဖြိုးတိုးတက်မှု ခရီး">Android Development Journey</h2>
+      <div class="timeline">
+        <div class="tl-item hologram">
+          <div class="tl-year">2023–Now</div>
+          <h3 data-en="Senior Android Focus" data-my="Senior Android အာရုံစိုက်">Senior Android Focus</h3>
+          <p data-en="Deep dive into Jetpack Compose, multi-module Clean Architecture, offline-first patterns, Firebase full suite, and production CI/CD with GitHub Actions + Azure DevOps." data-my="Jetpack Compose၊ multi-module Clean Architecture၊ offline-first၊ Firebase full suite နှင့် GitHub Actions + Azure DevOps ဖြင့် production CI/CD ကို နက်ရှိုင်းစွာ လေ့လာသည်။"></p>
+        </div>
+        <div class="tl-item hologram">
+          <div class="tl-year">2024–2025</div>
+          <h3 data-en="Certification Blitz" data-my="လက်မှတ်များ စုဆောင်း">Certification Blitz</h3>
+          <p data-en="82+ certificates across Programming Hub & Google Developers Launchpad covering Android, Kotlin, AI/ML, Security, Blockchain and more." data-my="Programming Hub နှင့် Google Developers Launchpad မှ Android၊ Kotlin၊ AI/ML၊ Security၊ Blockchain အပါအဝင် ၈၂+ လက်မှတ်များ။"></p>
+        </div>
+        <div class="tl-item hologram">
+          <div class="tl-year">Ongoing</div>
+          <h3 data-en="Open Source & Portfolios" data-my="Open Source နှင့် Portfolios">Open Source & Portfolios</h3>
+          <p data-en="Building 40+ public repositories, multiple GitHub Pages portfolios, Lovable apps, and community contributions while mentoring juniors." data-my="၄၀+ public repositories၊ GitHub Pages portfolios၊ Lovable apps များ တည်ဆောက်ပြီး junior များကို လမ်းညွှန်ပေးသည်။"></p>
+        </div>
+        <div class="tl-item hologram">
+          <div class="tl-year">Future</div>
+          <h3 data-en="Microsoft-Scale Products" data-my="Microsoft အဆင့် ထုတ်ကုန်များ">Microsoft-Scale Products</h3>
+          <p data-en="Actively seeking opportunities to contribute to large-scale Android products with advanced architecture, Azure integration and on-device ML." data-my="အဆင့်မြင့် ဗိသုကာ၊ Azure ပေါင်းစည်းမှုနှင့် on-device ML ပါဝင်သော ကြီးမားသော Android ထုတ်ကုန်များတွင် ပါဝင်ရန် အခွင့်အရေး ရှာဖွေနေသည်။"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS / KOTLIN MASTERY ========== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-label" data-en="// 03 · KOTLIN MASTERY" data-my="// 03 · KOTLIN ကျွမ်းကျင်မှု">// 03 · KOTLIN MASTERY</div>
+      <h2 class="section-title" data-en="Tech Stack & Kotlin Mastery" data-my="နည်းပညာများ နှင့် Kotlin ကျွမ်းကျင်မှု">Tech Stack & Kotlin Mastery</h2>
+      <div class="skills-grid">
+        <div class="skill-cat hologram">
+          <h3>📱 Android / Mobile</h3>
+          <div class="chips">
+            <span class="chip">Kotlin</span><span class="chip">Jetpack Compose</span><span class="chip">Android SDK</span>
+            <span class="chip">Material 3</span><span class="chip">Coroutines</span><span class="chip">Flow</span>
+            <span class="chip">ViewModel</span><span class="chip">Navigation</span><span class="chip">Room</span>
+            <span class="chip">Paging</span><span class="chip">WorkManager</span><span class="chip">DataStore</span>
+          </div>
+        </div>
+        <div class="skill-cat hologram">
+          <h3>🏗️ Architecture</h3>
+          <div class="chips">
+            <span class="chip">Clean Architecture</span><span class="chip">MVVM</span><span class="chip">MVI</span>
+            <span class="chip">Multi-module</span><span class="chip">Repository Pattern</span><span class="chip">SOLID</span>
+            <span class="chip">Dependency Injection</span><span class="chip">Hilt / Koin</span>
+          </div>
+        </div>
+        <div class="skill-cat hologram">
+          <h3>☁️ Backend & Cloud</h3>
+          <div class="chips">
+            <span class="chip">Firebase Auth</span><span class="chip">Firestore</span><span class="chip">FCM</span>
+            <span class="chip">Crashlytics</span><span class="chip">Retrofit</span><span class="chip">OkHttp</span>
+            <span class="chip">REST APIs</span><span class="chip">Python</span>
+          </div>
+        </div>
+        <div class="skill-cat hologram">
+          <h3>🤖 AI / ML & Security</h3>
+          <div class="chips">
+            <span class="chip">Claude API</span><span class="chip">TFLite</span><span class="chip">On-Device ML</span>
+            <span class="chip">Ethical Hacking</span><span class="chip">Cybersecurity</span><span class="chip">Kali Linux</span>
+          </div>
+        </div>
+        <div class="skill-cat hologram">
+          <h3>🛠️ DevOps & Tools</h3>
+          <div class="chips">
+            <span class="chip">GitHub Actions</span><span class="chip">Azure DevOps</span><span class="chip">Fastlane</span>
+            <span class="chip">JUnit</span><span class="chip">Espresso</span><span class="chip">MockK</span>
+            <span class="chip">Git</span><span class="chip">Figma</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== JETPACK COMPOSE SHOWCASE ========== -->
+  <section class="section alt" id="compose">
+    <div class="container">
+      <div class="section-label" data-en="// 04 · JETPACK COMPOSE" data-my="// 04 · JETPACK COMPOSE">// 04 · JETPACK COMPOSE</div>
+      <h2 class="section-title" data-en="Jetpack Compose Showcase" data-my="Jetpack Compose ပြသမှု">Jetpack Compose Showcase</h2>
+      <div class="compose-grid">
+        <div class="compose-card hologram">
+          <div class="compose-icon">✦</div>
+          <h3>Declarative UI</h3>
+          <p data-en="Building modern, reactive UIs with Compose that adapt to state changes and deliver buttery 60fps animations." data-my="State ပြောင်းလဲမှုကို တုံ့ပြန်ပြီး 60fps animations ဖြင့် ခေတ်မီ UI များကို Compose ဖြင့် တည်ဆောက်သည်။"></p>
+        </div>
+        <div class="compose-card hologram">
+          <div class="compose-icon">◈</div>
+          <h3>Material 3 + Theming</h3>
+          <p data-en="Dynamic color, dark/light themes, accessibility-first components and custom design systems." data-my="Dynamic color၊ dark/light themes၊ accessibility-first components နှင့် custom design systems။"></p>
+        </div>
+        <div class="compose-card hologram">
+          <div class="compose-icon">⬡</div>
+          <h3>Navigation & State</h3>
+          <p data-en="Type-safe Navigation Compose, SavedStateHandle, and unidirectional data flow with ViewModel + Flow." data-my="Type-safe Navigation Compose၊ SavedStateHandle နှင့် ViewModel + Flow ဖြင့် unidirectional data flow။"></p>
+        </div>
+        <div class="compose-card hologram">
+          <div class="compose-icon">⬢</div>
+          <h3>Performance</h3>
+          <p data-en="Recomposition control, stability annotations, Lazy lists, and profiling for production-ready performance." data-my="Recomposition control၊ stability annotations၊ Lazy lists နှင့် production-ready performance အတွက် profiling။"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== APP COLLECTION ========== -->
+  <section class="section" id="apps">
+    <div class="container">
+      <div class="section-label" data-en="// 05 · APP COLLECTION" data-my="// 05 · အက်ပ်စုစည်းမှု">// 05 · APP COLLECTION</div>
+      <h2 class="section-title" data-en="Senior-Level App Collection" data-my="Senior အဆင့် အက်ပ်စုစည်းမှု">Senior-Level App Collection</h2>
+      <p class="section-sub" data-en="Featured production and showcase apps demonstrating architecture, offline-first, Compose and real-world features." data-my="Architecture၊ offline-first၊ Compose နှင့် လက်တွေ့ features များကို ပြသသော production နှင့် showcase အက်ပ်များ။"></p>
+      <div class="apps-grid" id="appsGrid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section class="section alt" id="projects">
+    <div class="container">
+      <div class="section-label" data-en="// 06 · FEATURED PROJECTS" data-my="// 06 · ထူးခြားသော ပရောဂျက်များ">// 06 · FEATURED PROJECTS</div>
+      <h2 class="section-title" data-en="GitHub Projects & Repos" data-my="GitHub ပရောဂျက်များ">GitHub Projects & Repos</h2>
+      <div class="projects-grid">
+        <a href="https://github.com/moekyawaung-tech/video-player" target="_blank" class="project-card hologram">
+          <span class="p-emoji">🎯</span>
+          <h3>Video Player</h3>
+          <p>Advanced media player with offline caching</p>
+          <span class="p-link">github.com/moekyawaung-tech ↗</span>
+        </a>
+        <a href="https://github.com/moekyawaung-tech/social-dashboard" target="_blank" class="project-card hologram">
+          <span class="p-emoji">📱</span>
+          <h3>Social Dashboard</h3>
+          <p>Real-time social analytics & feed</p>
+          <span class="p-link">github.com/moekyawaung-tech ↗</span>
+        </a>
+        <a href="https://github.com/moekyawaung-tech/game-collection" target="_blank" class="project-card hologram">
+          <span class="p-emoji">🎮</span>
+          <h3>Game Collection</h3>
+          <p>Multi-game hub with scores & progress</p>
+          <span class="p-link">github.com/moekyawaung-tech ↗</span>
+        </a>
+        <a href="https://github.com/moekyawaung-tech/pwa-app" target="_blank" class="project-card hologram">
+          <span class="p-emoji">📱</span>
+          <h3>PWA App</h3>
+          <p>Installable progressive web experience</p>
+          <span class="p-link">github.com/moekyawaung-tech ↗</span>
+        </a>
+        <a href="https://github.com/moekyawaung-tech/Job-Portal-App" target="_blank" class="project-card hologram">
+          <span class="p-emoji">💼</span>
+          <h3>Job Portal</h3>
+          <p>Full job listing & application flow</p>
+          <span class="p-link">github.com/moekyawaung-tech ↗</span>
+        </a>
+        <a href="https://github.com/moekyawaung-tech/POS-Full-Version" target="_blank" class="project-card hologram">
+          <span class="p-emoji">🛒</span>
+          <h3>POS Full Version</h3>
+          <p>Point-of-sale system with inventory</p>
+          <span class="p-link">github.com/moekyawaung-tech ↗</span>
+        </a>
+        <a href="https://github.com/moekyawaung-tech/POS-Ultimate-Pro-Max" target="_blank" class="project-card hologram">
+          <span class="p-emoji">💰</span>
+          <h3>POS Ultimate Pro Max</h3>
+          <p>Enterprise POS with advanced reporting</p>
+          <span class="p-link">github.com/moekyawaung-tech ↗</span>
+        </a>
+        <a href="https://github.com/moekyawaung-tech/Weather-app" target="_blank" class="project-card hologram">
+          <span class="p-emoji">🌤️</span>
+          <h3>Weather App</h3>
+          <p>Location-based forecasts & alerts</p>
+          <span class="p-link">github.com/moekyawaung-tech ↗</span>
+        </a>
+        <a href="https://github.com/moekyawaung-tech/Daily-planner-app" target="_blank" class="project-card hologram">
+          <span class="p-emoji">📝</span>
+          <h3>Daily Planner</h3>
+          <p>Tasks, reminders & productivity</p>
+          <span class="p-link">github.com/moekyawaung-tech ↗</span>
+        </a>
+        <a href="https://github.com/moekyawaung-tech/Snake-Game-App" target="_blank" class="project-card hologram">
+          <span class="p-emoji">🐍</span>
+          <h3>Snake Game</h3>
+          <p>Classic game with modern Compose UI</p>
+          <span class="p-link">github.com/moekyawaung-tech ↗</span>
+        </a>
+        <a href="https://github.com/moekyawaung-tech/Lens-lite" target="_blank" class="project-card hologram">
+          <span class="p-emoji">📷</span>
+          <h3>Lens Lite</h3>
+          <p>Camera & vision utilities</p>
+          <span class="p-link">github.com/moekyawaung-tech ↗</span>
+        </a>
+        <a href="https://github.com/moekyawaung-tech/thailand-travel" target="_blank" class="project-card hologram">
+          <span class="p-emoji">✈️</span>
+          <h3>Thailand Travel</h3>
+          <p>Travel guide & itinerary planner</p>
+          <span class="p-link">github.com/moekyawaung-tech ↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OFFLINE-FIRST ARCHITECTURE ========== -->
+  <section class="section" id="architecture">
+    <div class="container">
+      <div class="section-label" data-en="// 07 · OFFLINE-FIRST" data-my="// 07 · OFFLINE-FIRST">// 07 · OFFLINE-FIRST ARCHITECTURE</div>
+      <h2 class="section-title" data-en="Offline-First Architecture" data-my="Offline-First ဗိသုကာ">Offline-First Architecture</h2>
+      <div class="arch-diagram hologram">
+        <div class="arch-layer">
+          <h4>UI Layer</h4>
+          <p>Jetpack Compose · ViewModel · StateFlow / SharedFlow</p>
+        </div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-layer">
+          <h4>Domain Layer</h4>
+          <p>Use Cases · Repository Interfaces · Domain Models</p>
+        </div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-layer">
+          <h4>Data Layer</h4>
+          <p>Room (local source of truth) · Retrofit · DataStore · WorkManager</p>
+        </div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-layer accent">
+          <h4>Sync Engine</h4>
+          <p>Conflict resolution · Delta sync · Offline queue · Firebase / Custom backend</p>
+        </div>
+      </div>
+      <div class="arch-points">
+        <div class="arch-point hologram"><strong>Room as Single Source of Truth</strong><span>UI always reads from local DB; network updates the DB.</span></div>
+        <div class="arch-point hologram"><strong>Optimistic UI</strong><span>Instant feedback while background sync reconciles.</span></div>
+        <div class="arch-point hologram"><strong>WorkManager + Constraints</strong><span>Reliable background sync even under battery/network limits.</span></div>
+        <div class="arch-point hologram"><strong>Multi-module Boundaries</strong><span>Feature modules + core data/domain for scalable teams.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ACHIEVEMENTS ========== -->
+  <section class="section alt" id="achievements">
+    <div class="container">
+      <div class="section-label" data-en="// 08 · ACHIEVEMENTS" data-my="// 08 · အောင်မြင်မှုများ">// 08 · ACHIEVEMENTS</div>
+      <h2 class="section-title" data-en="Professional Achievements" data-my="ပရော်ဖက်ရှင်နယ် အောင်မြင်မှုများ">Professional Achievements</h2>
+      <div class="achieve-grid">
+        <div class="achieve-card hologram">
+          <div class="a-num">82+</div>
+          <h3 data-en="Certificates" data-my="လက်မှတ်များ">Certificates</h3>
+          <p>Programming Hub · Google Developers Launchpad · Android · Kotlin · AI · Security</p>
+        </div>
+        <div class="achieve-card hologram">
+          <div class="a-num">40+</div>
+          <h3 data-en="Public Repos" data-my="Public Repos">Public Repos</h3>
+          <p>Across multiple GitHub accounts showcasing production patterns</p>
+        </div>
+        <div class="achieve-card hologram">
+          <div class="a-num">16</div>
+          <h3 data-en="Verified Socials" data-my="Verified Socials">Verified Socials</h3>
+          <p>GitHub · LinkedIn · YouTube · TikTok · Bluesky · Tumblr · Flickr · more</p>
+        </div>
+        <div class="achieve-card hologram">
+          <div class="a-num">∞</div>
+          <h3 data-en="Portfolios Built" data-my="Portfolios">Portfolios Built</h3>
+          <p>Dozens of GitHub Pages & Lovable apps demonstrating continuous craft</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GITHUB PAGES COLLECTION ========== -->
+  <section class="section" id="github-pages">
+    <div class="container">
+      <div class="section-label">// 09 · GITHUB PAGES</div>
+      <h2 class="section-title">GitHub Pages Portfolio Collection</h2>
+      <div class="links-grid" id="ghPages"></div>
+    </div>
+  </section>
+
+  <!-- ========== LOVABLE ========== -->
+  <section class="section alt" id="lovable">
+    <div class="container">
+      <div class="section-label">// 10 · LOVABLE APPS</div>
+      <h2 class="section-title">Lovable WPA Collection</h2>
+      <div class="links-grid" id="lovableLinks"></div>
+    </div>
+  </section>
+
+  <!-- ========== EMAILS ========== -->
+  <section class="section" id="emails">
+    <div class="container">
+      <div class="section-label">// 11 · EMAIL COLLECTION</div>
+      <h2 class="section-title">Professional Email Addresses</h2>
+      <div class="email-grid" id="emailGrid"></div>
+    </div>
+  </section>
+
+  <!-- ========== SOCIALS ========== -->
+  <section class="section alt" id="socials">
+    <div class="container">
+      <div class="section-label">// 12 · SOCIAL NETWORK</div>
+      <h2 class="section-title">Social Media & Gravatar Network</h2>
+      <div class="social-grid">
+        <a href="https://github.com/Dev-moe-kyawaung/" target="_blank" class="social-card hologram">GitHub</a>
+        <a href="https://www.linkedin.com/in/moe-kyaw-aung-2653093a1" target="_blank" class="social-card hologram">LinkedIn</a>
+        <a href="https://www.youtube.com/channel/UCuTXUguZb4xjeL2nX8WJG" target="_blank" class="social-card hologram">YouTube</a>
+        <a href="https://bsky.app/profile/moekyawaung96.bsky.social" target="_blank" class="social-card hologram">Bluesky</a>
+        <a href="https://www.tumblr.com/moekyawaung" target="_blank" class="social-card hologram">Tumblr</a>
+        <a href="https://www.flickr.com/people/204037451@N06" target="_blank" class="social-card hologram">Flickr</a>
+        <a href="https://vimeo.com/user252414232" target="_blank" class="social-card hologram">Vimeo</a>
+        <a href="https://gravatar.com/moekyawaung2026" target="_blank" class="social-card hologram">Gravatar</a>
+        <a href="http://moekyawaung2026.strikingly.com" target="_blank" class="social-card hologram">Strikingly</a>
+        <a href="https://moekyawaung.slack.com/" target="_blank" class="social-card hologram">Slack</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY ========== -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-label">// 13 · VISUAL GALLERY</div>
+      <h2 class="section-title">Profile & Media Gallery</h2>
+      <div class="gallery-grid">
+        <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778527878/IMG_20260430_053105_uef0yr.png" alt="Gallery" class="gal-img hologram" />
+        <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778747388/image-1_1_khsx9s.png" alt="Gallery" class="gal-img hologram" />
+        <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778763531/MKA_3_zqrhhr.webp" alt="Gallery" class="gal-img hologram" />
+        <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778763532/MKA_11_jbijtv.webp" alt="Gallery" class="gal-img hologram" />
+        <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778763532/MKA_13_i4bao3.webp" alt="Gallery" class="gal-img hologram" />
+        <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778763536/preview_ls5ptn.webp" alt="Gallery" class="gal-img hologram" />
+        <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778795825/cloud-icon-poster-1_2_opl7sy.png" alt="Gallery" class="gal-img hologram" />
+        <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778795856/copilot_image_1778795675037_heh9xk.png" alt="Gallery" class="gal-img hologram" />
+        <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1779052645/2153-fireworks-composer_gm3e0h.jpg" alt="Gallery" class="gal-img hologram" />
+        <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778795799/2024119_20_b94fen.jpg" alt="Gallery" class="gal-img hologram" />
+        <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778795800/2024119_18_syk2ou.jpg" alt="Gallery" class="gal-img hologram" />
+        <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1779031816/Content_65_oayzj3.jpg" alt="Gallery" class="gal-img hologram" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section alt" id="contact">
+    <div class="container">
+      <div class="section-label" data-en="// 14 · CONTACT" data-my="// 14 · ဆက်သွယ်ရန်">// 14 · CONTACT</div>
+      <h2 class="section-title" data-en="Let's Build Something" data-my="တစ်ခုခု တည်ဆောက်ကြရအောင်">Let's Build Something</h2>
+      <div class="contact-grid">
+        <div class="contact-info hologram">
+          <h3 data-en="Get in touch" data-my="ဆက်သွယ်ပါ">Get in touch</h3>
+          <p><strong>Phone</strong><br>+95 9 889 000 889<br>+959 666 000 050</p>
+          <p><strong>Primary Email</strong><br>moekyawaung@asia.com</p>
+          <p><strong>Location</strong><br>Tachileik, Myanmar 🇲🇲 ↔ Bangkok, Thailand 🇹🇭</p>
+          <p><strong>Status</strong><br><span class="online">● Available for senior Android roles & freelance</span></p>
+          <div class="contact-links">
+            <a href="https://github.com/Dev-moe-kyawaung/" target="_blank" class="btn-neon">GitHub</a>
+            <a href="https://www.linkedin.com/in/moe-kyaw-aung-2653093a1" target="_blank" class="btn-outline">LinkedIn</a>
+            <a href="https://gravatar.com/moekyawaung2026" target="_blank" class="btn-ghost">Gravatar</a>
+          </div>
+        </div>
+        <form class="contact-form hologram" id="contactForm" onsubmit="return handleContact(event)">
+          <input type="text" placeholder="Name / အမည်" required />
+          <input type="email" placeholder="Email" required />
+          <textarea rows="5" placeholder="Message / မက်ဆေ့ချ်" required></textarea>
+          <button type="submit" class="btn-neon" data-en="Send Message" data-my="ပို့ရန်">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p class="quote">"Code with culture. Build with purpose." — မိုးကျော်အောင် · Moe Kyaw Aung</p>
+      <p class="copy">© 2026 Moe Kyaw Aung · Senior Android Developer · Made in Myanmar 🇲🇲</p>
+      <p class="tech">Cyberpunk Portfolio · Neon Grid · Hologram UI · Glitch System</p>
+    </div>
+  </footer>
+
+  <!-- ========== AI ASSISTANT ========== -->
+  <div class="ai-panel" id="aiPanel">
+    <div class="ai-header">
+      <span>✦ MKA AI Assistant</span>
+      <button id="aiClose">✕</button>
+    </div>
+    <div class="ai-messages" id="aiMessages">
+      <div class="ai-msg bot">Hello! I'm the portfolio AI. Ask me about Moe Kyaw Aung's Android projects, Kotlin, Jetpack Compose, architecture, or experience. / မင်္ဂလာပါ! Android ပရောဂျက်များ၊ Kotlin၊ Compose အကြောင်း မေးနိုင်ပါတယ်။</div>
+    </div>
+    <div class="ai-input-wrap">
+      <input type="text" id="aiInput" placeholder="Ask about projects, skills, experience..." />
+      <button id="aiSend">Send</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
